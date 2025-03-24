@@ -42,11 +42,11 @@ Cook Master is a mobile application built with React Native and managed by Expo,
 - **Redux Persist:** Presisting app state across app restarts, even offline.
 - **Axios:** Making HTTP requests to our backend API and external services.
 - **Styled Components:** Writing CSS-in-JS for maintainable and reusable styling.
-- **React Navigation:** Managing navigation between screens within the app.
+- **Expo Router:** Managing navigation between screens within the app using the file base approach.
 - **Supabase:** Provides database services and authentication
 - **OpenAI API:** Powering the AI Recipe Generator and potentially assisting with ingredient-based recipe suggestions with state-of-the-art natural language processing. Hosted on a serverless function using Netlify Functions.
-- **[NEW] Computer Vision API:** Powering the Image-to-Recipe feature. (e.g., Google Cloud Vision API, Clarifai, or a custom-trained model). Describe how you are hosting and using this service, e.g., "Hosted on AWS Lambda and accessed via a dedicated API endpoint."
-- **[NEW] React Native Camera:** Facilitates taking pictures from within the application.
+- **Computer Vision API:** Powering the Image-to-Recipe feature.custom-trained model.
+- **Expo-Camera:** Facilitates taking pictures from within the application.
 
 **Architecture:**
 
@@ -68,15 +68,15 @@ The app follows a modular architecture, separating concerns into distinct compon
 - `/users/login`: Authenticate an existing user (POST).
 - `/users/favorites`: Fetch a user's favorite recipes (GET).
 - `/users/favorites/:recipeId`: Add or remove a recipe from a user's favorites (POST/DELETE).
-- `/image-to-recipe`: Send an image to the server for ingredient identification and recipe suggestions (POST). This endpoint would trigger the AWS Lambda function (or equivalent) for image processing and AI interaction.
+- `/image-to-recipe`: Send an image to the server for ingredient identification and recipe suggestions (POST). This endpoint would trigger the AWS Lambda function for image processing and AI interaction.
 
 **Getting Started:**
 
 1. **Clone the Repository:**
 
    ```bash
-   git clone [YOUR_REPO_URL]
-   cd [YOUR_PROJECT_DIRECTORY]
+   git clone git@github.com:Hashmozy/cook-master.git
+   cd cook-master
    ```
 
 2. **Install Dependencies:**
@@ -93,7 +93,7 @@ The app follows a modular architecture, separating concerns into distinct compon
    OPENAI_API_KEY=[YOUR_OPENAI_API_KEY]
    SUPABASE_URL=[YOUR_SUPABASE_URL]
    SUPABASE_ANON_KEY=[YOUR_SUPABASE_ANON_KEY]
-   COMPUTER_VISION_API_KEY=[YOUR_COMPUTER_VISION_API_KEY] #If Required
+   COMPUTER_VISION_API_KEY=[YOUR_COMPUTER_VISION_API_KEY]
    COMPUTER_VISION_API_URL=[YOUR_COMPUTER_VISION_API_URL] #The URL where your vision API is hosted
    ```
 
@@ -155,24 +155,9 @@ The app follows a modular architecture, separating concerns into distinct compon
 
    Follow the instructions provided by Expo CLI after running `npx expo start`. You'll likely need to install the Expo Go app on your mobile device.
 
-**Contributing:**
-
-We welcome contributions to Cook Master! If you'd like to contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and write tests. Pay special attention to testing the Camera component and the Image-to-Recipe functionality.
-4. Submit a pull request.
-
-Please follow our coding style and commit message conventions.
-
 **License:**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**Contact:**
-
-For questions, bug reports, or feature requests, please contact us at [YOUR_EMAIL_ADDRESS] or open an issue on GitHub.
 
 **Disclaimer:**
 
