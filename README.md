@@ -1,50 +1,24 @@
-# Welcome to your Expo app 👋
+# Cook Master - Your AI-Powered Recipe Hub (React Native - Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Cook Master is a mobile app built with React Native and managed by Expo, designed to be your ultimate companion in the kitchen. Explore a vast library of delicious recipes or unleash your culinary creativity with our AI-powered recipe generator.
 
-## Get started
+**Key Features:**
 
-1. Install dependencies
+- **Extensive Recipe Library:** Browse a curated collection of recipes with detailed instructions, ingredient lists, and stunning photos.
+- **AI Recipe Generator:** Feeling adventurous? Tell our AI what ingredients you have on hand, dietary restrictions, or desired cuisine, and it will generate a unique recipe just for you!
+- **User-Friendly Interface:** A clean and intuitive interface makes finding and creating recipes a breeze.
+- **Expo Managed:** Leveraging Expo for a streamlined development experience, making it easy to build, test, and deploy.
+- **[Future Features (Optional - Add your planned features here. Examples: Recipe Saving, Meal Planning, Shopping Lists)]**
 
-   ```bash
-   npm install
-   ```
+**Tech Stack:**
 
-2. Start the app
+- **React Native:** Building cross-platform mobile apps with native performance.
+- **Expo:** Simplifying React Native development with a unified platform.
+- **[Optional: Mention any other libraries you are using, e.g., Redux, Axios, Styled Components]**
+- **[Optional: Mention the API used for AI recipe generation. If it is a custom one, describe how it is hosted (e.g., Serverless functions)]**
 
-   ```bash
-    npx expo start
-   ```
+**Getting Started:**
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Clone the repository: `git clone [YOUR_REPO_URL]`
+2. Install dependencies: `npm install` or `yarn install`
+3. Start the Expo development server: `npx expo start`
