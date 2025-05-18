@@ -5,11 +5,9 @@ import "@/reanimatedConfig";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { Provider } from "react-redux";
 import "react-native-reanimated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Slot } from "expo-router";
-import { store } from "@/store/store";
+import { Stack } from "expo-router";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -37,7 +35,7 @@ const RootLayout: React.FC = () => {
       try {
         if (!fontsLoaded) return;
       } catch (e) {
-        // console.warn(e);
+        console.warn(e);
       } finally {
         setAppIsReady(true);
       }
@@ -55,13 +53,14 @@ const RootLayout: React.FC = () => {
   if (!appIsReady) return null;
 
   return (
-    <Provider store={store}>
-      <SafeAreaProvider>
-        <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-          <Slot />
-        </GestureHandlerRootView>
-      </SafeAreaProvider>
-    </Provider>
+    <SafeAreaProvider>
+      <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 };
 

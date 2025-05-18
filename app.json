@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "cook-master",
+    "name": "Cook Master",
     "slug": "cook-master",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,14 +9,18 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.musa.cookmaster",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFFFFF"
       },
-      "package": "com.asheri_musa.cookmaster"
+      "package": "com.musa.cookmaster"
     },
     "web": {
       "bundler": "metro",
@@ -31,7 +35,7 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#3DFCFF"
         }
       ],
       "expo-build-properties"
